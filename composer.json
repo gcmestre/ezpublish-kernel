@@ -67,8 +67,8 @@
         }
     },
     "scripts": {
-        "tests": "@php ./vendor/bin/paratest -p auto",
-        "integration-tests": "@php ./vendor/bin/paratest -p half -c phpunit-integration-legacy.xml",
+        "tests": "@php ./vendor/bin/paratest -p auto --runner=WrapperRunner",
+        "integration-tests": "@php ./vendor/bin/paratest -p half -c phpunit-integration-legacy.xml --runner=WrapperRunner",
         "fix-cs": "@php ./vendor/bin/php-cs-fixer fix -v --show-progress=estimating"
     },
     "extra": {
